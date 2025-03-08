@@ -1,3 +1,46 @@
-<p>
-  52.72.73.83.0.73.83.0.89.79.85.82.0.70.73.78.65.76.0.67.79.68.69.1.0.57.79.85.0.77.65.68.69.0.73.84.1.0.53.83.85.65.76.76.89.0.72.69.82.69.0.87.79.85.76.68.0.66.69.0.84.72.69.0.65.67.67.79.85.78.84.0.78.85.77.66.69.82.0.69.84.67.0.66.85.84.0.89.69.65.72.1.
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Clue</title>
+    <style>
+        #code {
+            display: none;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-family: monospace;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter the Correct Word to See the Code</h1>
+    <label for="password">Enter Word:</label>
+    <input type="text" id="password" placeholder="Type 'diver'">
+    <button onclick="checkPassword()">Submit</button>
+
+    <div id="code">
+        <pre>
+52.72.73.83.0.73.83.0.89.79.85.82.0.70.73.78.65.76.0.67.79.68.69.1.0.57.79.85.0.77.65.68.69.0.73.84.1.0.53.83.85.65.76.76.89.0.72.69.82.69.0.87.79.85.76.68.0.66.69.0.84.72.69.0.65.67.67.79.85.78.84.0.78.85.77.66.69.82.0.69.84.67.0.66.85.84.0.89.69.65.72.1.
+        </pre>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var input = document.getElementById("password").value;
+            var correctWord = "diver";
+            var codeDiv = document.getElementById("code");
+
+            if (input.toLowerCase() === correctWord) {
+                codeDiv.style.display = "block";
+            } else {
+                alert("Incorrect word! Try again.");
+            }
+        }
+    </script>
+</body>
+</html>
